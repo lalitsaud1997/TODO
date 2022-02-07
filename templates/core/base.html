@@ -11,9 +11,16 @@
     <title>{% block title %} Base Page {% endblock title %}</title>
   </head>
   <body>
-    {% block content %}
+    <div class="container">
+      <div class="jumbotron m-5">
+          <div class="container">
+            {% block content %}
 
-    {% endblock content %}
+            {% endblock content %}
+          </div>
+       </div>
+    </div>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

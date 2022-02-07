@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Home page {% endblock title %}
+
+{% block content %}
+<div class="text-center"> 
+   {% for Notes in note %}              {% comment %}..... model name in key name... {% endcomment %}
+      
+        
+        <div class="text-center text-justify border">
+            <h3>{{Notes.title}}</h3>
+            <h5>{{Notes.description}}</h5>
+            <a href="{% url 'edit' %}">Edit</a>
+            <a href="">Delete</a>
+
+
+        </div>
+        
+   
+    {% endfor %}
+    <a href="{% url 'add' %}" class="btn btn-primary mt-2">Add</a>
+</div> 
+{% endblock content %}
