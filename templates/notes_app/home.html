@@ -3,21 +3,19 @@
 {% block title %} Home page {% endblock title %}
 
 {% block content %}
-<div class="text-center"> 
-   {% for Notes in note %}              {% comment %}..... model name in key name... {% endcomment %}
-      
-        
-        <div class="text-center text-justify border">
-            <h3>{{Notes.title}}</h3>
-            <h5>{{Notes.description}}</h5>
-            <a href="{% url 'edit' %}">Edit</a>
-            <a href="">Delete</a>
-
-
-        </div>
-        
-   
-    {% endfor %}
-    <a href="{% url 'add' %}" class="btn btn-primary mt-2">Add</a>
+<div class="text-center">
+    {% if note %}
+           {% for Notes in note %}              {% comment %}..... model name in key name... {% endcomment %}
+                <div class="text-center text-justify border">
+                    <h3>{{Notes.title}}</h3>
+                    <h5>{{Notes.description}}</h5>
+                    <a class="pr-5" href="{% url 'edit' id=Notes.id %}">Edit</a>
+                    <a href="{% url 'delete' id=Notes.id %}">Delete</a>
+                </div>
+            {% endfor %}
+    {% else %}
+        <h4>No any Notes found, Please Add first...!!!</h4>
+    {% endif %}
+    <a href="{% url 'add' %}" class="btn btn-success pl-4 pr-4 mt-2">Add</a>
 </div> 
 {% endblock content %}
