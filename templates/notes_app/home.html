@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block title %} Home page {% endblock title %}
 
@@ -17,5 +18,15 @@
         <h4>No any Notes found, Please Add first...!!!</h4>
     {% endif %}
     <a href="{% url 'add' %}" class="btn btn-success pl-4 pr-4 mt-2">Add</a>
+    <div class="whatsapp_class">
+        <a href="https://wa.me/+9779818098098?text=I'm%20interested%20in%20to chat" class="href">
+            <img src="{% static '/images/whatsapp.png' %}" alt="whatsapp" width="64px">
+          </a>
+    </div>
+    <div class="viber_class">
+        <a href="https://msng.link/o/?+9779841039472=vi">
+            <img src="{% static '/images/viber.png' %}" alt="viber" width="64px">
+          </a>
+    </div>
 </div> 
 {% endblock content %}

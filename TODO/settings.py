@@ -72,6 +72,8 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'notes_app/static'),]
+
 WSGI_APPLICATION = 'TODO.wsgi.application'
 
 

@@ -1,0 +1,13 @@
+.jumbotron{
+    position: relative;
+}
+.whatsapp_class{
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+}
+.viber_class{
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+}
