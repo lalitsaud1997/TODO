@@ -1,12 +1,11 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
 {% block title %} Home page {% endblock title %}
 
 {% block content %}
 <div class="text-center">
     {% if note %}
-           {% for Notes in note %}              {% comment %}..... model name in key name... {% endcomment %}
+           {% for Notes in note %}      {% comment %}..... model name in key name... {% endcomment %}
                 <div class="text-center text-justify border">
                     <h3>{{Notes.title}}</h3>
                     <h5>{{Notes.description}}</h5>
@@ -19,12 +18,12 @@
     {% endif %}
     <a href="{% url 'add' %}" class="btn btn-success pl-4 pr-4 mt-2">Add</a>
     <div class="whatsapp_class">
-        <a href="https://wa.me/+9779818098098?text=I'm%20interested%20in%20to chat" class="href">
+        <a href="https://wa.me/+9779812687566?text=I'm%20interested%20in%20to chat" class="href">
             <img src="{% static '/images/whatsapp.png' %}" alt="whatsapp" width="64px">
           </a>
     </div>
     <div class="viber_class">
-        <a href="https://msng.link/o/?+9779841039472=vi">
+        <a href="https://msng.link/o/?+9779812687566=vi">
             <img src="{% static '/images/viber.png' %}" alt="viber" width="64px">
           </a>
     </div>
